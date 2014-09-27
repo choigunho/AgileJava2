@@ -1,10 +1,10 @@
+package studentinfo;
 import java.util.ArrayList;
 
 public class CourseSession {
 	
 	private String department;
 	private String number;
-	private int numberOfStudents = 0;
 	private ArrayList<Student> students = new ArrayList<Student>();
 	
 	CourseSession(String department, String number) {
@@ -21,11 +21,10 @@ public class CourseSession {
 	}
 	
 	int getNumberOfStudents() {
-		return numberOfStudents;
+		return students.size();
 	}
 	
 	void enroll(Student student) {
-		numberOfStudents = numberOfStudents + 1;
 		students.add(student);
 	}
 
