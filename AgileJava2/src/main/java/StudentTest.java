@@ -7,4 +7,5 @@ public class StudentTest extends TestCase {
 		String studentName = student.getName();
 		assertEquals("Jane Doe", studentName);
 	}
+	
 }
