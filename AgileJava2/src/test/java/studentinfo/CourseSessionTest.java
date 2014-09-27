@@ -52,22 +52,6 @@ public class CourseSessionTest {
 		assertEquals(sixteenWeeksOut, session.getEndDate());
 	}
 	
-	@Test
-	public void testRosterReport() {
-		Student studentA = new Student("A");
-		Student studentB = new Student("B");
-		session.enroll(studentA);
-		session.enroll(studentB);
-		
-		String rosterReport = session.getRosterReport();
-		assertEquals(
-				CourseSession.ROSTER_REPORT_HEADER +
-				"A" + CourseSession.NEWLINE +
-				"B" + CourseSession.NEWLINE +
-				CourseSession.ROSTER_REPORT_FOOTER + "2" +
-				CourseSession.NEWLINE, rosterReport);
-	}
-	
 	Date createDate(int year, int month, int date) {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.clear();
