@@ -1,7 +1,7 @@
 
 public class Student {
 
-	String name;
+	private String name;
 	
 	Student(String name) {
 		this.name = name;
