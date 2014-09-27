@@ -4,6 +4,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * Provides a rpresentation of a single-semester
+ * session of a specific university course.
+ * @author gunho
+ */
 public class CourseSession {
 	
 	private String department;
@@ -16,6 +21,13 @@ public class CourseSession {
 		this.number = number;
 	}
 	
+	/**
+	 * Constructs a CourseSession starting on a specific date
+	 * 
+	 * @param department
+	 * @param number
+	 * @param startDate
+	 */
 	CourseSession(String department, String number, Date startDate) {
 		this.department = department;
 		this.number = number;
