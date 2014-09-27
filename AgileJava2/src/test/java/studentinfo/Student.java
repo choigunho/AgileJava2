@@ -1,5 +1,10 @@
 package studentinfo;
 
+/**
+ * Test
+ * @author gunho
+ *
+ */
 public class Student {
 
 	private String name;
