@@ -1,7 +1,10 @@
-import junit.framework.*;
+import static org.junit.Assert.*;
 
-public class StudentTest extends TestCase {
+import org.junit.Test;
 
+public class StudentTest {
+
+	@Test
 	public void testCreate() {
 		Student student = new Student("Jane Doe");
 		String studentName = student.getName();
