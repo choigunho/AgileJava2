@@ -1,4 +1,4 @@
-package studentinfo;
+package sis.studentinfo;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,7 +29,7 @@ public class CourseSession {
 	 * @param number
 	 * @param startDate
 	 */
-	CourseSession(String department, String number, Date startDate) {
+	public CourseSession(String department, String number, Date startDate) {
 		this.department = department;
 		this.number = number;
 		this.startDate = startDate;
@@ -47,7 +47,7 @@ public class CourseSession {
 		return students.size();
 	}
 	
-	void enroll(Student student) {
+	public void enroll(Student student) {
 		students.add(student);
 	}
 	

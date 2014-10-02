@@ -1,8 +1,10 @@
-package studentinfo;
+package sis.report;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import sis.studentinfo.*;
 
 public class RosterReporterTest {
 
