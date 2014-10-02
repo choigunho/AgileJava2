@@ -1,8 +1,10 @@
-package sis.studentinfo;
+
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import sis.studentinfo.Student;
 
 public class StudentTest {
 

@@ -6,19 +6,19 @@ import sis.studentinfo.Student;
 
 public class RosterReporter {
 
-	static final String NEWLINE = System.getProperty("line.separator");
-	static final String ROSTER_REPORT_HEADER = 
+	public static final String NEWLINE = System.getProperty("line.separator");
+	public static final String ROSTER_REPORT_HEADER = 
 			"Student" + NEWLINE +
 			"-" + NEWLINE;
-	static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students = ";
+	public static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students = ";
 	
 	private CourseSession session;
 	
-	RosterReporter(CourseSession session) {
+	public RosterReporter(CourseSession session) {
 		this.session = session;
 	}
 	
-	String getReport() {
+	public String getReport() {
 		StringBuilder buffer = new StringBuilder();
 		writeHeader(buffer);
 		writeBody(buffer);

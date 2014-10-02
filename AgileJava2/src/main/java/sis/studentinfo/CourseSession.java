@@ -35,15 +35,15 @@ public class CourseSession {
 		this.startDate = startDate;
 	}
 	
-	String getDepartment() {
+	public String getDepartment() {
 		return department;
 	}
 	
-	String getNumber() {
+	public String getNumber() {
 		return number;
 	}
 	
-	int getNumberOfStudents() {
+	public int getNumberOfStudents() {
 		return students.size();
 	}
 	
@@ -51,11 +51,11 @@ public class CourseSession {
 		students.add(student);
 	}
 	
-	Student get(int index) {
+	public Student get(int index) {
 		return students.get(index);
 	}
 	
-	Date getEndDate() {
+	public Date getEndDate() {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.setTime(startDate);
 		
@@ -68,7 +68,7 @@ public class CourseSession {
 		return calendar.getTime();
 	}
 	
-	Date getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
