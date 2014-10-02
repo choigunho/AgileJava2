@@ -14,4 +14,9 @@ public class StudentTest {
 		String studentName = student.getName();
 		assertEquals("Jane Doe", studentName);
 	}
+	
+	@Test
+	public void testBadStatic() {
+		
+	}
 }
