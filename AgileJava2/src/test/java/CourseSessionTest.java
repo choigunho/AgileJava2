@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 
 import java.util.Date;
@@ -8,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sis.studentinfo.CourseSession;
+import sis.studentinfo.DateUtil;
 import sis.studentinfo.Student;
 
 
@@ -18,7 +17,7 @@ public class CourseSessionTest {
 	
 	@Before
 	public void setUp() {
-		startDate = new DateUtil().createDate(2003, 1, 6);
+		startDate = DateUtil.createDate(2003, 1, 6);
 		session = new CourseSession("ENGL", "101", startDate);
 		
 	}
@@ -48,8 +47,21 @@ public class CourseSessionTest {
 	
 	@Test
 	public void testCourseDates() {
-		Date sixteenWeeksOut = new DateUtil().createDate(2003, 4, 25);
+		Date sixteenWeeksOut = DateUtil.createDate(2003, 4, 25);
 		assertEquals(sixteenWeeksOut, session.getEndDate());
+	}
+	
+	@Test
+	public void testCount() {
+		CourseSession.count = 0;
+		createCourseSession();
+		assertEquals(1, CourseSession.count);
+		createCourseSession();
+		assertEquals(2, CourseSession.count);
+	}
+	
+	private CourseSession createCourseSession() {
+		return new CourseSession("ENGL", "101", startDate);
 	}
 	
 }

@@ -17,6 +17,8 @@ public class CourseSession {
 	private ArrayList<Student> students = new ArrayList<Student>();
 	private Date startDate;
 	
+	public static int count;
+	
 	CourseSession(String department, String number) {
 		this.department = department;
 		this.number = number;
@@ -33,6 +35,7 @@ public class CourseSession {
 		this.department = department;
 		this.number = number;
 		this.startDate = startDate;
+		CourseSession.count = CourseSession.count + 1;
 	}
 	
 	public String getDepartment() {
