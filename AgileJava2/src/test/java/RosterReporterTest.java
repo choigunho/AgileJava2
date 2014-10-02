@@ -4,12 +4,13 @@ import org.junit.Test;
 
 import sis.report.RosterReporter;
 import sis.studentinfo.*;
+import static sis.report.RosterReporter.NEWLINE;
 
 public class RosterReporterTest {
 
 	@Test
 	public void testRosterReport() {
-		CourseSession session = new CourseSession("ENGL", "101", DateUtil.createDate(2003, 1, 6));
+		CourseSession session = CourseSession.create("ENGL", "101", DateUtil.createDate(2003, 1, 6));
 		
 		session.enroll(new Student("A"));
 		session.enroll(new Student("B"));
@@ -18,10 +19,10 @@ public class RosterReporterTest {
 		System.out.println(rosterReport);
 		assertEquals(
 				RosterReporter.ROSTER_REPORT_HEADER +
-				"A" + RosterReporter.NEWLINE +
-				"B" + RosterReporter.NEWLINE +
+				"A" + NEWLINE +
+				"B" + NEWLINE +
 				RosterReporter.ROSTER_REPORT_FOOTER + "2" +
-				RosterReporter.NEWLINE, rosterReport);
+				NEWLINE, rosterReport);
 	}
 	
 }

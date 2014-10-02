@@ -17,7 +17,7 @@ public class CourseSession {
 	private ArrayList<Student> students = new ArrayList<Student>();
 	private Date startDate;
 	
-	public static int count;
+	private static int count;
 	
 	CourseSession(String department, String number) {
 		this.department = department;
@@ -31,11 +31,15 @@ public class CourseSession {
 	 * @param number
 	 * @param startDate
 	 */
-	public CourseSession(String department, String number, Date startDate) {
+	private CourseSession(String department, String number, Date startDate) {
 		this.department = department;
 		this.number = number;
 		this.startDate = startDate;
-		CourseSession.count = CourseSession.count + 1;
+	}
+	
+	public static CourseSession create(String department, String number, Date startDate) {
+		CourseSession.incrementCount();
+		return new CourseSession(department, number, startDate);
 	}
 	
 	public String getDepartment() {
@@ -74,8 +78,21 @@ public class CourseSession {
 	public Date getStartDate() {
 		return startDate;
 	}
+	
+	public static void resetCount() {
+		count = 0;
+	}
+	
+	public static int getCount() {
+		return count;
+	}
 
+	private static void incrementCount() {
+		++count;
+	}
+	
 	public ArrayList<Student> getAllStudents() {
 		return students;
 	}
+	
 }
