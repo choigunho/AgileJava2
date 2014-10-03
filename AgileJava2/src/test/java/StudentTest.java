@@ -16,6 +16,9 @@ public class StudentTest {
 	
 	@Test
 	public void testBadStatic() {
+	
+		
+		
 		
 	}
 }
