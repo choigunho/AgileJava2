@@ -3,6 +3,7 @@ package sis.report;
 import sis.studentinfo.CourseSession;
 import sis.studentinfo.Student;
 
+
 public class RosterReporter {
 
 	public static final String NEWLINE = System.getProperty("line.separator");
