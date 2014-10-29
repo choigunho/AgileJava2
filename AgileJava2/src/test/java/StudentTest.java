@@ -14,6 +14,11 @@ public class StudentTest {
 	}
 	
 	@Test
+	public void test1() {
+		
+	}
+	
+	@Test
 	public void testBadStatic() {
 		
 	}
