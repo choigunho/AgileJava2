@@ -1,13 +1,10 @@
+package sis.studentinfo;
 import static org.junit.Assert.*;
 
 import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import sis.studentinfo.CourseSession;
-import sis.studentinfo.DateUtil;
-import sis.studentinfo.Student;
 
 
 public class CourseSessionTest {
