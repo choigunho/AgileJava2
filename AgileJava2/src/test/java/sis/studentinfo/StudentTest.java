@@ -12,13 +12,4 @@ public class StudentTest {
 		assertEquals("Jane Doe", studentName);
 	}
 	
-	@Test
-	public void test1() {
-		
-	}
-	
-	@Test
-	public void testBadStatic() {
-		
-	}
 }
